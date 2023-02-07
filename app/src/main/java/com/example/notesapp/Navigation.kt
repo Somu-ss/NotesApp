@@ -57,8 +57,7 @@ fun Navigation(
 
                     }
                 }
-            },
-             loginViewModel = loginViewModel) {
+            }, loginViewModel = loginViewModel) {
                 navController.navigate(LoginRoutes.LogIn.name)
             }
         }

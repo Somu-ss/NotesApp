@@ -98,8 +98,10 @@ fun LoginScreen(
             if (loginUiState?.isLoading == true){
                 CircularProgressIndicator()
             }
-            LaunchedEffect(key1 = loginViewModel?.containUser){
-                onNavToHomePage.invoke()
+            LaunchedEffect(key1 = loginViewModel?.containUser) {
+                if (loginViewModel?.containUser==true) {
+                    onNavToHomePage.invoke()
+                }
             }
 
         }
@@ -198,8 +200,10 @@ fun SignUpScreen(
             if (loginUiState?.isLoading == true){
                 CircularProgressIndicator()
             }
-            LaunchedEffect(key1 = loginViewModel?.containUser){
-                onNavToHomePage.invoke()
+            LaunchedEffect(key1 = loginViewModel?.containUser) {
+                if (loginViewModel?.containUser == true) {
+                    onNavToHomePage.invoke()
+                }
             }
 
         }
